@@ -30,15 +30,13 @@ export default async function CardWrapper() {
   );
 }
 
-export function Card({
-  title,
-  value,
-  type,
-}: {
+interface Props {
   title: string;
   value: number | string;
   type: 'invoices' | 'customers' | 'pending' | 'collected';
-}) {
+}
+
+export function Card({ title, value, type }: Props) {
   const Icon = iconMap[type];
 
   return (
