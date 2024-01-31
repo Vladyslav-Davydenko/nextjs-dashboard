@@ -10,13 +10,9 @@ import {
   CardsSkeleton,
 } from '@/app/ui/skeletons';
 
-import { fetchLatestInvoices } from '../../lib/data';
-
 import { lusitana } from '../../ui/fonts';
 
 export default async function Page() {
-  const latestInvoices = await fetchLatestInvoices();
-
   return (
     <main>
       <h1 className={`${lusitana.className} text-x1 mb-4 md:text-2xl`}>
